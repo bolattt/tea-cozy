@@ -1,0 +1,180 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:Helvetica,serif;
+    background-color: black;
+    color:seashell; 
+    width: 100vw;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/***** header ******/
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:69px;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: black;
+    width: 100vw;
+    z-index: 10;
+}
+
+header #logo{
+    margin-left:10px;
+    height:50px;
+}
+
+header ul{
+    display:flex;
+    margin-right:20px;
+}
+
+li{
+    list-style: none;
+    margin-right:20px;   
+}
+
+a{
+    text-decoration: none;
+    color:rgb(208, 207, 207);
+    font-size: 1.4rem;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: rgb(148, 147, 147)
+}
+
+/***** Mission *****/
+#mission{
+    height:100vh;
+    margin-top:69px;
+}
+#mission-background{
+    background-image: url('./images/img-mission-background.jpg');
+    width:auto;
+    height:100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mission .container{
+    width:100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+
+/****** Gallery ********/
+.gallery{
+    min-height:95vh;
+    width: 100%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin:30px;
+}
+.gallery-text {
+    width: 100%;
+    margin-bottom:10px;
+}
+.row{
+    width: 90%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:30px;
+}
+
+.row figure{
+   width:30%;
+}
+
+.row figure img{
+    width:100%;
+}
+
+/*** Locations  ***/
+#locations{
+    background-image: url('./images/img-locations-background.jpg');
+    min-height:85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.locations .spacer{
+    width:70%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.location{
+    width:20%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/**** Contact ****/
+#contact{
+
+    text-align: center;
+    margin:50px;
+}
+
+/*****  footer ******/
+footer{
+    margin:30px;
+    opacity: 0.7;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+/*****  media queries ****/
+@media only screen and (max-width:1200px){
+    .row{
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row figure{
+        width:100%;
+        margin-bottom:30px;
+    }
+    figcaption{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width:800px){
+    #locations .spacer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location{
+        width:50%;
+        margin-bottom: 20px;
+        padding:20px;
+    }
+}
